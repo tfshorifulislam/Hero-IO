@@ -5,7 +5,7 @@ import { IoStarSharp } from "react-icons/io5";
 const AllCard = ({ card }) => {
     return (
         <div>
-            <div className="card bg-base-100 shadow-sm">
+            <div className="card bg-base-200 cardAnimate shadow-sm cursor-pointer ">
                 <figure className='flex justify-center items-center px-5 py-30'>
                     <img className='max-w-48'
                         src={card.image}
