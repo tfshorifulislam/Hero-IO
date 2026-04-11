@@ -1,22 +1,28 @@
 import React, { useEffect, useState } from 'react';
 import AllCard from '../../ui/AllCard/AllCard';
 import { NavLink } from 'react-router';
+import { HashLoader } from 'react-spinners';
 
 
 
 const TrendingApps = () => {
 
     const [app, setApp] = useState([])
+    const [loading, setLoading] = useState(true)
 
     useEffect(() => {
         const fetchData = async () => {
             const res = await fetch('/data.json');
             const data = await res.json();
-            setApp(data)
-        }
+            setTimeout(() => {
+                setApp(data)
+                setLoading(false)
+            }, 2000)
 
+        }
         fetchData()
     })
+
 
 
     return (
@@ -30,11 +36,15 @@ const TrendingApps = () => {
 
                 </p>
             </div>
-            <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 w-11/12 mx-auto'>
-                {
-                    app.slice(0, 8).map(card => <AllCard card={card} />)
-                }
-            </div>
+            {
+                loading ? <div className='flex justify-center items-center h-screen'><HashLoader color='#632EE3' /></div> :
+                    <div
+                        className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 w-11/12 mx-auto'>
+                        {
+                            app.slice(0, 8).map(card => <AllCard card={card} />)
+                        }
+                    </div>
+            }
             <div className='flex justify-center items-center mt-10 mb-20'>
                 <NavLink to={'/Apps'}>
                     <button
