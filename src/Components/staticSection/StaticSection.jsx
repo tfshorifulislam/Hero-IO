@@ -2,7 +2,7 @@ import React from 'react';
 
 const StaticSection = () => {
     return (
-        <div className='bg-linear-to-r from-[#632EE3] to-[#9F62F2] flex flex-col justify-center items-center py-20 px-5'>
+        <div className='bg-linear-to-r from-[#632EE3] to-[#9F62F2] flex flex-col justify-center items-center py-20 px-10'>
             <div>
                 <h1 className='text-white font-bold text-xl md:text-5xl text-center mb-5 md:mb-10'>Trusted by Millions, Built for You</h1>
             </div>
