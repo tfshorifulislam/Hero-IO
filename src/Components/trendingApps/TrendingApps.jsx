@@ -2,29 +2,14 @@ import React, { useEffect, useState } from 'react';
 import AllCard from '../../ui/AllCard/AllCard';
 import { NavLink } from 'react-router';
 import { HashLoader } from 'react-spinners';
+import UseAppsData from '../../useAppsData/UseAppsData';
 
 
 
 const TrendingApps = () => {
 
-    const [app, setApp] = useState([])
-    const [loading, setLoading] = useState(true)
-
-    useEffect(() => {
-        const fetchData = async () => {
-            const res = await fetch('/data.json');
-            const data = await res.json();
-            setTimeout(() => {
-                setApp(data)
-                setLoading(false)
-            }, 2000)
-
-        }
-        fetchData()
-    })
-
-
-
+    const {app, loading} = UseAppsData()
+    
     return (
         <div className='mt-5 md:mt-20'>
             <div className='flex flex-col justify-center items-center space-y-3 md:space-y-5 mb-4 md:mb-10'>
