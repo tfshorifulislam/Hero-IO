@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import AllCard from '../../ui/AllCard/AllCard';
+import { NavLink } from 'react-router';
 
 
 
@@ -31,8 +32,16 @@ const TrendingApps = () => {
             </div>
             <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 w-11/12 mx-auto'>
                 {
-                    app.slice(0,8).map(card => <AllCard card={card} />)
+                    app.slice(0, 8).map(card => <AllCard card={card} />)
                 }
+            </div>
+            <div className='flex justify-center items-center mt-10 mb-20'>
+                <NavLink to={'/Apps'}>
+                    <button
+                        className='btn btn-xs sm:btn-sm md:btn-md bg-linear-to-r from-[#632EE3] to-[#9F62F2] border-none rounded-lg text-white font-bold py-4 px-10'>
+                        Show All
+                    </button>
+                </NavLink>
             </div>
         </div>
     );

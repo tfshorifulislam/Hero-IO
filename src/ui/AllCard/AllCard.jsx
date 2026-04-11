@@ -6,7 +6,7 @@ const AllCard = ({ card }) => {
     return (
         <div>
             <div className="card bg-base-100 shadow-sm">
-                <figure className='flex justify-center items-center p-5'>
+                <figure className='flex justify-center items-center px-5 py-30'>
                     <img className='max-w-48'
                         src={card.image}
                         alt="Shoes" />
