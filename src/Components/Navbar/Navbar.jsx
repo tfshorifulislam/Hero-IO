@@ -19,7 +19,7 @@ const Navbar = () => {
                         <li><NavLink to={'/Installation'} className={({ isActive }) => isActive ? 'text-purple-600 ' : ''}>Installation</NavLink></li>
                     </ul>
                 </div>
-                <NavLink to={'/'} className="btn btn-ghost text-purple-700 text-xl">HERO.IO</NavLink>
+                <NavLink to={'/'} className="btn btn-ghost btn-xs sm:btn-sm md:btn-md text-purple-700 text-xl">HERO.IO</NavLink>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 items-center">
@@ -29,7 +29,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn bg-purple-700 rounded-lg text-white"><IoLogoGithub /> Contribute</a>
+                <a className="btn btn-xs sm:btn-sm md:btn-md bg-purple-700 rounded-lg text-white"><IoLogoGithub /> Contribute</a>
             </div>
         </div>
     );
