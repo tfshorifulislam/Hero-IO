@@ -1,17 +1,39 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import AllCard from '../../ui/AllCard/AllCard';
+
+
 
 const TrendingApps = () => {
+
+    const [app, setApp] = useState([])
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const res = await fetch('/data.json');
+            const data = await res.json();
+            setApp(data)
+        }
+
+        fetchData()
+    })
+
+
     return (
         <div className='mt-5 md:mt-20'>
-           <div className='flex flex-col justify-center items-center space-y-3 md:space-y-5 mb-4 md:mb-10'>
-            <h1 className='font-bold text-[#001931] text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-center'>
-                Trending Apps
-            </h1>
-            <p className='text-lg text-[#627382] text-center'>
-                Explore All Trending Apps on the Market developed by us
+            <div className='flex flex-col justify-center items-center space-y-3 md:space-y-5 mb-4 md:mb-10'>
+                <h1 className='font-bold text-[#001931] text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-center'>
+                    Trending Apps
+                </h1>
+                <p className='text-lg text-[#627382] text-center'>
+                    Explore All Trending Apps on the Market developed by us
 
-            </p>
-           </div>
+                </p>
+            </div>
+            <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 w-11/12 mx-auto'>
+                {
+                    app.slice(0,8).map(card => <AllCard card={card} />)
+                }
+            </div>
         </div>
     );
 };
