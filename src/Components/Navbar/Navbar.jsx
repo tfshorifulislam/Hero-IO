@@ -4,7 +4,7 @@ import { NavLink } from 'react-router';
 const Navbar = () => {
 
     return (
-        <div className="navbar">
+        <div className="navbar mb-20 mt-3">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -12,13 +12,13 @@ const Navbar = () => {
                     </div>
                     <ul
                         tabIndex="-1"
-                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow items-center">
+                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow items-start">
                         <li><NavLink to={'/'} className={({ isActive }) => isActive ? 'text-purple-600 ' : ''}>Home</NavLink></li>
                         <li><NavLink to={'/Apps'} className={({ isActive }) => isActive ? 'text-purple-600 ' : ''}>Apps</NavLink></li>
                         <li><NavLink to={'/Installation'} className={({ isActive }) => isActive ? 'text-purple-600 ' : ''}>Installation</NavLink></li>
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">daisyUI</a>
+                <NavLink to={'/'} className="btn btn-ghost text-purple-700 text-xl">HERO.IO</NavLink>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 items-center">
@@ -28,7 +28,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn">Button</a>
+                <a className="btn bg-purple-700 rounded-lg text-white">Contribute</a>
             </div>
         </div>
     );
