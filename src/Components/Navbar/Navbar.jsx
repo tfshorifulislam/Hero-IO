@@ -5,7 +5,7 @@ import { IoLogoGithub } from "react-icons/io5";
 const Navbar = () => {
 
     return (
-        <div className="navbar mb-4 md:mb-20 mt-3">
+        <div className="navbar mb-4 md:mb-20 mt-3 w-11/12  mx-auto">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

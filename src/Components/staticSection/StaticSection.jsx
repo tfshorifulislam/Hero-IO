@@ -2,11 +2,11 @@ import React from 'react';
 
 const StaticSection = () => {
     return (
-        <div className='bg-[#8e69e2] flex flex-col justify-center items-center py-20 px-5'>
+        <div className='bg-linear-to-r from-[#632EE3] to-[#9F62F2] flex flex-col justify-center items-center py-20 px-5'>
             <div>
-                <h1 className='text-white font-bold text-2xl md:text-5xl text-center mb-5 md:mb-10'>Trusted by Millions, Built for You</h1>
+                <h1 className='text-white font-bold text-xl md:text-5xl text-center mb-5 md:mb-10'>Trusted by Millions, Built for You</h1>
             </div>
-            <div className='flex gap-7'>
+            <div className='flex gap-10 md:gap-20'>
                 <div className='font-extrabold text-2xl md:text-6xl text-white md:leading-16'>
                     <p>29.6M</p>
                 </div>
