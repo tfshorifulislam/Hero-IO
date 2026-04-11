@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router';
+import { IoLogoGithub } from "react-icons/io5";
 
 const Navbar = () => {
 
@@ -28,7 +29,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn bg-purple-700 rounded-lg text-white">Contribute</a>
+                <a className="btn bg-purple-700 rounded-lg text-white"><IoLogoGithub /> Contribute</a>
             </div>
         </div>
     );
