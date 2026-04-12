@@ -2,6 +2,8 @@ import React from 'react';
 import { useParams } from 'react-router';
 import UseAppsData from '../../useAppsData/UseAppsData';
 import { HashLoader } from 'react-spinners';
+import NotFoundApp from '../../ui/NotFoundApp/NotFoundApp';
+import Loading from '../../ui/Loding/Loading';
 
 const AppDetails = () => {
     const { id } = useParams()
@@ -11,7 +13,10 @@ const AppDetails = () => {
     console.log(expectedApp)
 
     if (loading) {
-        return (<HashLoader />)
+        return <Loading />
+    }
+    if (!expectedApp) {
+        return <NotFoundApp />
     }
 
     return (

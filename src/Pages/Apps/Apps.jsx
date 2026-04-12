@@ -2,6 +2,7 @@ import React from 'react';
 import UseAppsData from '../../useAppsData/UseAppsData';
 import { HashLoader } from 'react-spinners';
 import AllCard from '../../ui/AllCard/AllCard';
+import Loading from '../../ui/Loding/Loading';
 
 const Apps = () => {
     const { app, loading } = UseAppsData()
@@ -17,7 +18,7 @@ const Apps = () => {
                 </p>
             </div>
             {
-                loading ? <div className='flex justify-center items-center h-screen'><HashLoader color='#632EE3' /></div> :
+                loading ? <Loading /> :
                     <div
                         className=' grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 w-11/12 mx-auto'>
                         {
