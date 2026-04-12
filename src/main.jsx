@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import { RouterProvider } from 'react-router'
 import { route } from './Router/Router'
+import InstalledAppsContext from './Context/InstalledAppsContext'
 
 
 
@@ -10,6 +11,8 @@ import { route } from './Router/Router'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={route} />
+    <InstalledAppsContext>
+      <RouterProvider router={route} />
+    </InstalledAppsContext>
   </StrictMode>,
 )

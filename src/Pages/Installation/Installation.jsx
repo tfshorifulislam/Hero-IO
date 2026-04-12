@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { appContext } from '../../Context/InstalledAppsContext';
 
 const Installation = () => {
+
+    const { install, setInstall } = useContext(appContext)
+    console.log(install)
+       
     return (
         <div>
-            <h1>This is installation page</h1>
+            {
+                install.map(i => <div>{i.title}</div>)
+            }
         </div>
     );
 };
