@@ -3,16 +3,23 @@ import { HashLoader } from 'react-spinners';
 import { FaDownload, FaStar } from 'react-icons/fa';
 import { MdReviews } from 'react-icons/md';
 import { appContext } from '../../Context/InstalledAppsContext';
+import { toast } from 'react-toastify';
 
 const AppsDetailsCard = ({ expectedApp }) => {
 
 
     const { install, setInstall } = useContext(appContext)
-    
+
 
     const handleInstall = () => {
-        
+        const exist = install.find(item => item.id === expectedApp.id);
+        if (exist) {
+            toast.warn(`${expectedApp.title} is Already Exist`)
+            return;
+        }
+
         setInstall([...install, expectedApp])
+        toast.success(`${expectedApp.title} is Install`)
     }
 
     return (

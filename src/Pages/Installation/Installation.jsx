@@ -8,7 +8,7 @@ const Installation = () => {
     console.log(install)
 
     return (
-        <div className='mx-auto w-11/12 mb-20'>
+        <div className='mx-auto w-11/12 mb-20 h-screen'>
             <div className='flex flex-col justify-center text-center'>
                 <h1
                     className='font-bold text-5xl text-[#001931] mb-4'>

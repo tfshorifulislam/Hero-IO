@@ -3,6 +3,7 @@ import { FaDownload } from "react-icons/fa6";
 import { IoStar } from "react-icons/io5";
 import { appContext } from "../../Context/InstalledAppsContext";
 import { useContext } from "react";
+import { toast } from "react-toastify";
 
 const InstallationCard = ({ i }) => {
     const { install, setInstall } = useContext(appContext)
@@ -10,6 +11,7 @@ const InstallationCard = ({ i }) => {
     const handleUninstall = () => {
         const newArr = install.filter(item => item.id !== i.id);
         setInstall(newArr)
+        toast.error(`${i.title} is Uninstall`)
     }
 
     return (
