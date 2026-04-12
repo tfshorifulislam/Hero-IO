@@ -6,6 +6,7 @@ const UseAppsData = () => {
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
+        setLoading(true)
         const fetchData = async () => {
             const res = await fetch('/data.json');
             const data = await res.json();
