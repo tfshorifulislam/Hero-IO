@@ -8,7 +8,7 @@ const Installation = () => {
     console.log(install)
 
     return (
-        <div>
+        <div className='mx-auto w-11/12 mb-20'>
             <div className='flex flex-col justify-center text-center'>
                 <h1
                     className='font-bold text-5xl text-[#001931] mb-4'>
@@ -18,14 +18,16 @@ const Installation = () => {
                     Explore All Trending Apps on the Market developed by us
                 </p>
             </div>
-            <div>
+            <div className='mb-6'>
                 <p className='text-2xl md:leading-8 text-[#001931] font-semibold '>
                     {install.length} Apps Found
                 </p>
             </div>
-            {
-                install.map(i => <InstallationCard key={i.id} i={i} />)
-            }
+            <div className='space-y-4'>
+                {
+                    install.map(i => <InstallationCard key={i.id} i={i} />)
+                }
+            </div>
         </div>
     );
 };
