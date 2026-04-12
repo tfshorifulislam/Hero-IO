@@ -16,13 +16,12 @@ const UseAppsData = () => {
 
         }
         fetchData()
-    })
+    }, [])
 
 
 
-    return (
-        { app, loading }
-    );
+    return { app, loading };
+
 };
 
 export default UseAppsData;
