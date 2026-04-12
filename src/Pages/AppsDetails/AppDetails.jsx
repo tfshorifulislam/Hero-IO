@@ -67,6 +67,23 @@ const AppDetails = () => {
                     </div>
                 </div>
             </div>
+            <div className='border-b border-[#00193120] my-10'></div>
+            <div>
+                <p
+                    className='text-[#001931] font-semibold text-xl md:leading-8 mb-6'>
+                    Ratings
+                </p>
+
+                
+            </div>
+            <div className='border-b border-[#00193120] my-10'></div>
+            <div className='space-y-3 md:max-w-[90%]'>
+                <p className='font-semibold text-[#001931] '>Description</p>
+                <span className='text-[#627382] md: leading-8 text-lg'>
+                    {expectedApp.description}
+                </span>
+            </div>
+
         </div>
     )
 }
