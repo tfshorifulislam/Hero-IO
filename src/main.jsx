@@ -6,9 +6,6 @@ import { route } from './Router/Router'
 import InstalledAppsContext from './Context/InstalledAppsContext'
 
 
-
-
-
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <InstalledAppsContext>

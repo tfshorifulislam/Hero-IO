@@ -4,6 +4,7 @@ import Apps from "../Pages/Apps/Apps";
 import Layout from "../Layout/Layout";
 import Installation from "../Pages/Installation/Installation";
 import AppDetails from "../Pages/AppsDetails/AppDetails";
+import Dashboard from "../Pages/dashboard/Dashboard";
 
 export const route = createBrowserRouter([
     {
@@ -13,7 +14,8 @@ export const route = createBrowserRouter([
             { index: true, element: <Home /> },
             { path: '/Apps', element: <Apps /> },
             { path: '/Apps/:id', element: <AppDetails /> },
-            { path: 'Installation', element: <Installation /> }
+            { path: 'Installation', element: <Installation /> },
+            { path: 'dashboard', element: <Dashboard /> }
         ],
         errorElement: <Error />
 

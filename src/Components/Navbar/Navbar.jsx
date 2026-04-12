@@ -17,6 +17,7 @@ const Navbar = () => {
                         <li><NavLink to={'/'} className={({ isActive }) => isActive ? 'text-purple-600 ' : ''}>Home</NavLink></li>
                         <li><NavLink to={'/Apps'} className={({ isActive }) => isActive ? 'text-purple-600 ' : ''}>Apps</NavLink></li>
                         <li><NavLink to={'/Installation'} className={({ isActive }) => isActive ? 'text-purple-600 ' : ''}>Installation</NavLink></li>
+                        <li><NavLink to={'/dashboard'} className={({ isActive }) => isActive ? 'text-purple-600 ' : ''}>Dashboard</NavLink></li>
                     </ul>
                 </div>
                 <NavLink to={'/'} className="btn btn-ghost btn-xs sm:btn-sm md:btn-md text-purple-700 text-xl">HERO.IO</NavLink>
@@ -26,6 +27,7 @@ const Navbar = () => {
                     <li><NavLink to={'/'} className={({ isActive }) => isActive ? 'text-purple-600 ' : ''}>Home</NavLink></li>
                     <li><NavLink to={'/Apps'} className={({ isActive }) => isActive ? 'text-purple-600 ' : ''}>Apps</NavLink></li>
                     <li><NavLink to={'/Installation'} className={({ isActive }) => isActive ? 'text-purple-600 ' : ''}>Installation</NavLink></li>
+                    <li><NavLink to={'/dashboard'} className={({ isActive }) => isActive ? 'text-purple-600 ' : ''}>Dashboard</NavLink></li>
                 </ul>
             </div>
             <div className="navbar-end">
