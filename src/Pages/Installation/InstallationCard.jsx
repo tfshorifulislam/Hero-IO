@@ -1,8 +1,17 @@
 
 import { FaDownload } from "react-icons/fa6";
 import { IoStar } from "react-icons/io5";
+import { appContext } from "../../Context/InstalledAppsContext";
+import { useContext } from "react";
 
 const InstallationCard = ({ i }) => {
+    const { install, setInstall } = useContext(appContext)
+
+    const handleUninstall = () => {
+        const newArr = install.filter(item => item.id !== i.id);
+        setInstall(newArr)
+    }
+
     return (
         <div className=''>
             <div className="card lg:card-side bg-base-100 shadow-sm items-center">
@@ -36,7 +45,9 @@ const InstallationCard = ({ i }) => {
                         </div>
 
                         <div>
-                            <button className="btn text-white font-semibold bg-[#00D390] rounded-sm   ">
+                            <button
+                                onClick={() => handleUninstall()}
+                                className="btn text-white font-semibold bg-[#00D390] rounded-sm   ">
                                 Uninstall
                             </button>
                         </div>
