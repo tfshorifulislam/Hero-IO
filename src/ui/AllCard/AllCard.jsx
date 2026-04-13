@@ -10,7 +10,7 @@ const AllCard = ({ card }) => {
                 <figure className='flex justify-center items-center px-5 py-30'>
                     <img className='max-w-48'
                         src={card.image}
-                        alt="Shoes" />
+                        alt={card.title} />
                 </figure>
 
                 <div className='px-4 pb-5'>
