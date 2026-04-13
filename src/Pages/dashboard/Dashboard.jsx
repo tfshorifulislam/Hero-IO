@@ -32,7 +32,7 @@ const Dashboard = () => {
                         cx="50%"
                         cy="50%"
                         outerRadius="50%"
-                        fill="#8884d8"
+                        fill="#9F62F2"
                         isAnimationActive={true}
                     />
                     <Pie
