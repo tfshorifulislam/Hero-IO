@@ -16,15 +16,15 @@ const InstallationCard = ({ i }) => {
 
     return (
         <div className=''>
-            <div className="card lg:card-side bg-base-100 shadow-sm items-center">
-                <figure>
+            <div className="md:card lg:card-side bg-base-100 shadow-sm items-center">
+                <figure className="flex justify-center items-center">
                     <img
                         className="max-w-40 p-5"
                         src={i.image}
                         alt={i.title} />
                 </figure>
                 <div className="card-body">
-                    <div className="flex justify-between items-center">
+                    <div className="flex flex-col space-y-4 md:space-y-0 md:flex-row justify-start md:justify-between md:items-center">
                         <div>
                             <h2 className="card-title">{i.title}</h2>
                             <div className="flex gap-4 items-center">

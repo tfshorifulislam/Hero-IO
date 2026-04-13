@@ -31,7 +31,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn btn-xs sm:btn-sm md:btn-md bg-purple-700 rounded-lg text-white"><IoLogoGithub className='md:flex hidden' /> Contribute</a>
+                <a className="btn btn-xs sm:btn-sm md:btn-md bg-purple-700 rounded-lg text-white"><IoLogoGithub /> Contribute</a>
             </div>
         </div>
     );
