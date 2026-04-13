@@ -11,10 +11,10 @@ const Installation = () => {
         <div className='mx-auto w-11/12 mb-20 min-h-screen'>
             <div className='flex flex-col justify-center text-center'>
                 <h1
-                    className='font-bold text-5xl text-[#001931] mb-4'>
+                    className='font-bold text-3xl md:text-5xl text-[#001931] mb-3 md:mb-4'>
                     Your Installed Apps
                 </h1>
-                <p className='text-[#627382] md:leading-8 text-xl mb-5 md:mb-10'>
+                <p className='text-[#627382] md:leading-8 text-lg md:text-xl mb-5 md:mb-10'>
                     Explore All Trending Apps on the Market developed by us
                 </p>
             </div>
