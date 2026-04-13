@@ -4,11 +4,11 @@ import InstallationCard from './InstallationCard';
 
 const Installation = () => {
 
-    const { install, setInstall } = useContext(appContext)
-    console.log(install)
+    const { install } = useContext(appContext)
+    
 
     return (
-        <div className='mx-auto w-11/12 mb-20 h-screen'>
+        <div className='mx-auto w-11/12 mb-20 min-h-screen'>
             <div className='flex flex-col justify-center text-center'>
                 <h1
                     className='font-bold text-5xl text-[#001931] mb-4'>
