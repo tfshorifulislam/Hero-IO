@@ -2,7 +2,7 @@ import React from 'react';
 import banner from '../../assets/hero.png'
 const Banner = () => {
     return (
-        <div className='flex flex-col-reverse md:flex-col  justify-center items-center w-11/12 mx-auto'>
+        <div className='flex flex-col md:flex-col  justify-center items-center w-11/12 mx-auto'>
             <div className='space-y-4 text-center'>
                 <h1 className='font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:7xl text-[#001931]'>
                     We Build <br /><span className='text-[#9F62F2]'>Productive Apps</span>

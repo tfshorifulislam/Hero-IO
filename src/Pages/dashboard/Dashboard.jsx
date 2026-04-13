@@ -19,7 +19,8 @@ const Dashboard = () => {
 
     return (
         <div className='min-h-screen '>
-            <h1 className='text-center text-2xl md:text-4xl font-bold'>Install and UnInstall Apps</h1>
+            <h1 className='text-center text-2xl md:text-4xl font-bold'><span className='text-[#9f62f2]'>
+                Install</span> and <span className='text-[#82ca9d]'>UnInstall</span> Apps</h1>
 
             <div className='flex justify-center'>
                 <PieChart
