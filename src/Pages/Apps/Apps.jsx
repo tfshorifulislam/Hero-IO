@@ -1,6 +1,5 @@
 import React from 'react';
 import UseAppsData from '../../useAppsData/UseAppsData';
-import { HashLoader } from 'react-spinners';
 import AllCard from '../../ui/AllCard/AllCard';
 import Loading from '../../ui/Loding/Loading';
 
@@ -22,7 +21,7 @@ const Apps = () => {
                     <div
                         className=' grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 w-11/12 mx-auto'>
                         {
-                            app.map(card => <AllCard key={card.id} card={card} />)
+                            app.map(card => <AllCard key={card.id} card={card}  />)
                         }
                     </div>
             }

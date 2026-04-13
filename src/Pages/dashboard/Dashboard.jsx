@@ -6,13 +6,13 @@ import UseAppsData from '../../useAppsData/UseAppsData';
 const Dashboard = () => {
     const { install } = useContext(appContext)
     const { app } = UseAppsData()
-    const uninstalledApp = install.length - app.length
+    const uninstalledApp = app.length - install.length;
     const data01 = [
         { name: ' install', value: install.length },
 
     ];
     const data02 = [
-        { name: 'Uninstall', value: uninstalledApp.length },
+        { name: 'Uninstall', value: uninstalledApp },
 
     ];
 
